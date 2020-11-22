@@ -1,0 +1,29 @@
+html,
+body{
+   
+    color: #555;
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    margin-top: 0;;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    line-height: 1.1;
+}
+
+strong{
+    color:  #222;
+}
+
+li{
+    margin-top: 0.25rem;
+}
+
+.currentPage {
+    border-bottom: 2px solid #222;
+}
