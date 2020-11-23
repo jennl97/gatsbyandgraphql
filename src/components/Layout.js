@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 
 import Header from '../components/Header';
-import useSiteMetadata from '../hooks/use-sitemetadata'
 import useSiteMetaData from '../hooks/use-sitemetadata';
 
 const Main = styled.main`padding: 0.5rem calc((100vw - 1000px) / 2);`
