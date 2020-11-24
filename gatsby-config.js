@@ -7,6 +7,7 @@ module.exports = {
         'gatsby-plugin-styled-components',
         'gatsby-plugin-react-helmet',
         `gatsby-plugin-emotion`,
+        
         {
         resolve: 'gatsby-plugin-mdx',
         options: {
@@ -21,7 +22,7 @@ module.exports = {
                 name: 'posts',
                 path: './src/posts'
             }
-        }
-
+        },
+        
     ],
 };
