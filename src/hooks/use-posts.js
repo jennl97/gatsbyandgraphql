@@ -9,6 +9,15 @@ query {
               title
               slug
               author
+              images {
+                sharp: childImageSharp {
+                  fluid(
+                    maxWidth: 100                    
+                  ){
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
             excerpt
           }
@@ -20,6 +29,7 @@ return data.allMdx.nodes.map(post => ({
     title: post.frontmatter.title,
     author: post.frontmatter.author,
     slug: post.frontmatter.slug,
+    images: post.frontmatter.images,
     excerpt: post.excerpt
 }))
 }

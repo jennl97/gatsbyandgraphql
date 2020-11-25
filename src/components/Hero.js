@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { css } from '@emotion/core';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 
-const ImageBackground = styled.div`
+const ImageBackground = styled(BackgroundImage)`
     background-image: url('/images/lanceAndersonChicago.jpg');
     background-position: top 20% center;
     background-size: cover;
@@ -23,10 +24,21 @@ const TextBox = styled.div`
 
 
 const Hero = () => {
+    const { image } = useStaticQuery(graphql`
+    query{
+        image: file(relativePath: { eq: "lanceAndersonChicago.jpg" }) {
+            sharp: childImageSharp{
+                fluid{
+                    ...GatsbyImageSharpFluid_withWebp
+                }
+            }
+        }
+    }
+    `)
     return (
         <>
 
-           <ImageBackground>
+           <ImageBackground Tag="section" fluid={image.sharp.fluid}>
                <TextBox>
             <h1 css={css`
                 text-shadow: 1px 1px 3px #eeddff66;
