@@ -1,22 +1,20 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/Layout';
-import PostPreview from '../components/PostPreview';
-import usePosts from '../hooks/use-posts';
 import Hero from '../components/Hero';
+import { css } from 'gatsby-plugin-emotion';
+import Image from 'gatsby-image';
+
+
 
 export default () => {
-const posts = usePosts();
+
 
 return (
     <>
     <Hero></Hero>
-<Layout>  
-    <h2>Check out my blog</h2>
-    {posts.map(post => (
-        <PostPreview key={post.slug} post={post} />
-    ))}
-
+<Layout> 
+    <p>Thanks for stopping by!</p>
+    <p>This page started off I followed along to the Intro to Gatsby workshop from Frontend Masters.</p>
 </Layout>
 </>
 )
