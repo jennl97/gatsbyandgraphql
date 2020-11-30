@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { css } from '@emotion/core';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
 const ImageBackground = styled(BackgroundImage)`
@@ -43,13 +43,13 @@ const Hero = () => {
             <h1 css={css`
                 text-shadow: 1px 1px 3px #eeddff66;
                 font-size: 2.25rem;
-            `}>Frontend Masters + Gatsby &hearts;</h1>
+            `}>Jennifer Hott-Leitsch</h1>
             <p css={css`
                 color: #222;
                 margin-top: 0;
-            `}>Hello USA <Link to="/about/" css={css`
-                margin-top: 0.5rem;
-            `}>Learn more about me!</Link></p>
+            `}>Currently Located in the Chicago Area. I am open to relocation!</p>
+            
+            
             </TextBox>
             </ImageBackground>  
          </>  
